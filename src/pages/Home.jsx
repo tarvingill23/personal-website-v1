@@ -1,19 +1,19 @@
 import Experience from "../components/Experience";
-import springBootLogo from "../assets/springboot.svg";
-import reactLogo from "../assets/react.svg";
-import javaLogo from "../assets/java.svg";
-import bashLogo from "../assets/bash.svg";
-import mysqlLogo from "../assets/mysql.svg";
-import postmanLogo from "../assets/postman.svg";
-import wordPressLogo from "../assets/wordpress.svg";
-import shopifyLogo from "../assets/shopify.svg";
-import vueLogo from "../assets/vuejs.svg";
-import vuetifyLogo from "../assets/vuetify.svg";
-import javaScriptLogo from "../assets/javascript.svg";
-import htmlLogo from "../assets/html-5.svg";
-import whispirLogo from "../assets/whispir.svg";
-import cssLogo from "../assets/css.svg";
-import rLogo from "../assets/rlogo.svg";
+import springBootLogo from "../assets/logos/springboot.svg";
+import reactLogo from "../assets/logos/react.svg";
+import javaLogo from "../assets/logos/java.svg";
+import bashLogo from "../assets/logos/bash.svg";
+import mysqlLogo from "../assets/logos/mysql.svg";
+import postmanLogo from "../assets/logos/postman.svg";
+import wordPressLogo from "../assets/logos/wordpress.svg";
+import shopifyLogo from "../assets/logos/shopify.svg";
+import vueLogo from "../assets/logos/vuejs.svg";
+import vuetifyLogo from "../assets/logos/vuetify.svg";
+import javaScriptLogo from "../assets/logos/javascript.svg";
+import htmlLogo from "../assets/logos/html-5.svg";
+import whispirLogo from "../assets/logos/whispir.svg";
+import cssLogo from "../assets/logos/css.svg";
+import rLogo from "../assets/logos/rlogo.svg";
 import { Grid, Typography } from "@mui/material";
 
 const Home = () => {

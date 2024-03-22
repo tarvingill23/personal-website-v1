@@ -6,15 +6,15 @@ import { useState } from "react";
 import { VolumeUp } from "@mui/icons-material";
 import { useMemo } from "react";
 import { VolumeOff } from "@mui/icons-material";
+import ContactIcons from "./ContactIcons";
 
 const Header = () => {
   const links = [
     { name: "Home", link: "/home" },
     { name: "About", link: "/about" },
-    { name: "Contact", link: "/contact" },
   ];
   const constraintsRef = useRef(null);
-  const audio = "../src/assets/music/music.mp3";
+  const audio = "../src/assets/music/music.wav";
   const [muted, setMuted] = useState(true);
   const audioElement = useRef(null);
   const audioContext = useMemo(() => new AudioContext(), []);
@@ -66,8 +66,9 @@ const Header = () => {
         <IconButton onClick={playAudio}>
           {muted === true ? <VolumeOff /> : <VolumeUp />}
         </IconButton>
+        <ContactIcons></ContactIcons>
       </Toolbar>
-      <audio src={audio} ref={audioElement}></audio>
+      <audio loop src={audio} ref={audioElement}></audio>
       <motion.div
         animate={{
           backgroundColor: ["#034694", "#DBA111"],

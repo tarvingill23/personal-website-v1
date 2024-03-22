@@ -2,17 +2,15 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { useState } from "react";
 import Header from "./components/Header";
 
 function App() {
-  const [colorMode, setColorMode] = useState("dark");
   const theme = createTheme({
     typography: {
       fontFamily: "Iceberg, sans-serif",
     },
     palette: {
-      mode: colorMode,
+      mode: "dark",
       primary: {
         main: "#f44336",
       },

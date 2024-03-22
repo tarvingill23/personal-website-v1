@@ -1,7 +1,6 @@
-import { Divider, Grid, Tooltip, Typography } from "@mui/material";
+import { Grid, Tooltip, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
-import React from "react";
 
 const Experience = ({
   title,
