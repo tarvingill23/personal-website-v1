@@ -7,14 +7,14 @@ import { VolumeUp } from "@mui/icons-material";
 import { useMemo } from "react";
 import { VolumeOff } from "@mui/icons-material";
 import ContactIcons from "./ContactIcons";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const links = [
-    { name: "Home", link: "/home" },
-    { name: "About", link: "/about" },
+    { name: "Home", link: "/" },
+    { name: "Experience", link: "/experience" },
   ];
-  const constraintsRef = useRef(null);
-  const audio = "../src/assets/music/music.wav";
+  const audio = "../src/assets/music/jazz.mp3";
   const [muted, setMuted] = useState(true);
   const audioElement = useRef(null);
   const audioContext = useMemo(() => new AudioContext(), []);
@@ -46,27 +46,27 @@ const Header = () => {
   };
 
   return (
-    <AppBar elevation={0}>
-      <Toolbar ref={constraintsRef}>
-        {links.map((link, index) => (
-          <motion.div
-            drag
-            dragConstraints={constraintsRef}
-            whileHover={{ scale: 1.1 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0, transitionEnd: { opacity: 1 } }}
-            transition={{ duration: 1 }}
-            key={index}
-          >
-            <Button color="inherit">
+    <AppBar
+      sx={{ display: "flex", justifyContent: "space-between" }}
+      elevation={0}
+    >
+      <Toolbar>
+        <>
+          {links.map((link, index) => (
+            <Button
+              key={index}
+              LinkComponent={Link}
+              to={link.link}
+              color="inherit"
+            >
               <Typography>{link.name}</Typography>
             </Button>
-          </motion.div>
-        ))}
-        <IconButton onClick={playAudio}>
-          {muted === true ? <VolumeOff /> : <VolumeUp />}
-        </IconButton>
-        <ContactIcons></ContactIcons>
+          ))}
+          <IconButton onClick={playAudio}>
+            {muted === true ? <VolumeOff /> : <VolumeUp />}
+          </IconButton>
+          <ContactIcons />
+        </>
       </Toolbar>
       <audio loop src={audio} ref={audioElement}></audio>
       <motion.div

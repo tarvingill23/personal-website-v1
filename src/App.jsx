@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Header from "./components/Header";
+import ExperiencePage from "./pages/ExperiencePage";
 
 function App() {
   const theme = createTheme({
@@ -28,6 +29,7 @@ function App() {
         <div style={{ marginTop: "100px" }}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
+            <Route path="/experience" element={<ExperiencePage />}></Route>
           </Routes>
         </div>
       </ThemeProvider>
