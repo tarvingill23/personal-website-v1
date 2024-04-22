@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import LinkedInIcon from "../assets/logos/linkedin.svg";
-import GitHubIcon from "../assets/logos/github.svg";
+import GitHubIcon from "../assets/logos/github-filled.svg";
 import { motion } from "framer-motion";
 
 const ContactIcons = () => {

@@ -16,7 +16,11 @@ const Experience = ({
         alignItems={"center"}
         container
         rowSpacing={2}
-        sx={{ boxShadow: "0px 0px 10px 10px #DBA111", p: 5 }}
+        sx={{
+          boxShadow: "0px 0px 10px 10px #DBA111",
+          p: 5,
+          minHeight: "600px",
+        }}
       >
         <Grid xs={12} item>
           <Typography variant="h5">{company}</Typography>
@@ -34,7 +38,7 @@ const Experience = ({
               <Typography variant="p">Languages:</Typography>
             </Grid>
             {languages.map((language, index) => (
-              <Grid key={index} xs={1} item>
+              <Grid key={index} xs={2} md={1} item>
                 <Tooltip title={language.tooltip}>
                   <motion.img
                     whileHover={{ scale: 1.2 }}
@@ -54,7 +58,7 @@ const Experience = ({
             </Grid>
 
             {frameworks.map((framework, index) => (
-              <Grid key={index} xs={1} item>
+              <Grid key={index} xs={2} md={1} item>
                 <Tooltip title={framework.tooltip}>
                   <motion.img
                     whileHover={{ scale: 1.2 }}
@@ -74,7 +78,7 @@ const Experience = ({
             </Grid>
 
             {platforms.map((platform, index) => (
-              <Grid key={index} xs={1} item>
+              <Grid key={index} xs={2} md={1} item>
                 <Tooltip title={platform.tooltip}>
                   <motion.img
                     whileHover={{ scale: 1.2 }}

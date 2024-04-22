@@ -91,11 +91,13 @@ const ExperiencePage = () => {
       sx={{ p: 3 }}
     >
       <Grid sx={{ display: "flex", justifyContent: "center" }} xs={12} item>
-        <Typography variant="h3">Experience</Typography>
+        <Typography variant="h3">
+          <b>Experience</b>
+        </Typography>
       </Grid>
       {jobs.map((job, index) => {
         return (
-          <Grid xs={10} key={index} item>
+          <Grid lg={6} xs={12} key={index} item>
             <Experience
               key={index}
               title={job.title}

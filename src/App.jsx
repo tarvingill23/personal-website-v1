@@ -4,19 +4,22 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Header from "./components/Header";
 import ExperiencePage from "./pages/ExperiencePage";
+import ProjectsPage from "./pages/ProjectsPage";
+import { useState } from "react";
 
 function App() {
+  const [colorMode, setColorMode] = useState(true);
   const theme = createTheme({
     typography: {
-      fontFamily: "Iceberg, sans-serif",
+      fontFamily: "Work Sans, sans-serif",
     },
     palette: {
-      mode: "dark",
+      mode: colorMode ? "light" : "dark",
       primary: {
-        main: "#f44336",
+        main: "#DBA111",
       },
       secondary: {
-        main: "#3f51b5",
+        main: "#FFFFFF",
       },
     },
   });
@@ -25,11 +28,12 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Header />
+        <Header colorModeProp={[colorMode, setColorMode]} />
         <div style={{ marginTop: "100px" }}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/experience" element={<ExperiencePage />}></Route>
+            <Route path="/projects" element={<ProjectsPage />}></Route>
           </Routes>
         </div>
       </ThemeProvider>
