@@ -15,25 +15,26 @@ import whispirLogo from "../assets/logos/whispir.svg";
 import cssLogo from "../assets/logos/css.svg";
 import rLogo from "../assets/logos/rlogo.svg";
 import { Grid, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 
-const ExperiencePage = () => {
+const ExperiencePage = ({ colorModeProp }) => {
+  const colorMode = colorModeProp[0];
   const jobs = [
     {
       title: "IT Consultant",
       company: "FDM Group",
-      description: "Completed the Java Development Training course",
-      languages: [
+      companyLogo: "../src/assets/images/fdm-logo.png",
+      description: "Completed FDM training and awaiting placement",
+      companyLink: "https://fdmgroup.com/en-au/",
+      skills: [
         { tooltip: "Java", icon: javaLogo },
         { tooltip: "Bash", icon: bashLogo },
-      ],
-      frameworks: [
         { tooltip: "Spring Boot", icon: springBootLogo },
         { tooltip: "React.js", icon: reactLogo },
-      ],
-      platforms: [
         { tooltip: "MySQL", icon: mysqlLogo },
         { tooltip: "Postman", icon: postmanLogo },
       ],
+      animate: { x: [-800, 10, 0] },
     },
     {
       title: "Web Designer and Developer",
@@ -41,43 +42,48 @@ const ExperiencePage = () => {
       description:
         "Designed and developed websites for Tasmanian and interstate businesses",
       languages: [],
-      frameworks: [],
-      platforms: [
+      companyLogo: "../src/assets/images/broken-image-logo.png",
+      companyLink: "https://www.bicreative.com.au/",
+      skills: [
         { tooltip: "WordPress", icon: wordPressLogo },
         { tooltip: "Shopify", icon: shopifyLogo },
       ],
+      animate: { x: [800, -10, 0] },
     },
     {
       title: "Front End Developer",
       company: "JourneyMakr",
+      companyLogo: colorMode
+        ? "../src/assets/images/jm-logo.png"
+        : "../src/assets/images/jm-logo.jpg",
       description:
-        "Designed and developed front end components and UI of a travel planning web application",
-      languages: [
+        "Designed and developed various front end components within the site",
+      companyLink: "https://journeymakr.com/",
+      skills: [
         { tooltip: "JavaScript", icon: javaScriptLogo },
         { tooltip: "HTML", icon: htmlLogo },
         { tooltip: "CSS", icon: cssLogo },
-      ],
-      frameworks: [
         { tooltip: "Vue.js", icon: vueLogo },
         { tooltip: "Vuetify", icon: vuetifyLogo },
-      ],
-      platforms: [
         { tooltip: "WordPress", icon: wordPressLogo },
         { tooltip: "Shopify", icon: shopifyLogo },
       ],
+      animate: { y: [800, -10, 0] },
     },
     {
       title: "Information Management Officer",
       company: "Department of Health Tasmania",
       description:
-        "Designed web templates used for departmental communication and data collection to and from COVID-19 cases",
-      languages: [
+        "Designed web messaging templates on Whispir for departmental communication and data collection from COVID-19 cases",
+      companyLogo: "../src/assets/images/tas-gov.png",
+      companyLink: "",
+      skills: [
         { tooltip: "CSS", icon: cssLogo },
         { tooltip: "HTML", icon: htmlLogo },
         { tooltip: "R", icon: rLogo },
+        { tooltip: "Whispir Messaging", icon: whispirLogo },
       ],
-      frameworks: [],
-      platforms: [{ tooltip: "Whispir Messaging", icon: whispirLogo }],
+      animate: { y: [-800, -10, 0] },
     },
   ];
 
@@ -103,16 +109,20 @@ const ExperiencePage = () => {
               title={job.title}
               company={job.company}
               description={job.description}
-              languages={job.languages}
-              frameworks={job.frameworks}
-              platforms={job.platforms}
+              skills={job.skills}
               companyLogo={job.companyLogo}
+              companyLink={job.companyLink}
+              animateProp={job.animate}
             />
           </Grid>
         );
       })}
     </Grid>
   );
+};
+
+ExperiencePage.propTypes = {
+  colorModeProp: PropTypes.array,
 };
 
 export default ExperiencePage;

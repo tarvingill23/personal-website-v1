@@ -4,8 +4,8 @@ import "../assets/styles/home.css";
 
 const Home = () => {
   return (
-    <Grid className="container" justifyContent={"center"} container>
-      <Grid item>
+    <Grid className="home-container" justifyContent={"center"} container>
+      <Grid xs={10} item>
         <motion.div
           style={{
             display: "flex",

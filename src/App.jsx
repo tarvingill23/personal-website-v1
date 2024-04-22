@@ -21,6 +21,9 @@ function App() {
       secondary: {
         main: "#FFFFFF",
       },
+      info: {
+        main: "#191970",
+      },
     },
   });
 
@@ -32,7 +35,12 @@ function App() {
         <div style={{ marginTop: "100px" }}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/experience" element={<ExperiencePage />}></Route>
+            <Route
+              path="/experience"
+              element={
+                <ExperiencePage colorModeProp={[colorMode, setColorMode]} />
+              }
+            ></Route>
             <Route path="/projects" element={<ProjectsPage />}></Route>
           </Routes>
         </div>
