@@ -23,7 +23,8 @@ const ExperiencePage = ({ colorModeProp }) => {
     {
       title: "IT Consultant",
       company: "FDM Group",
-      companyLogo: "../src/assets/logos/fdm-logo.png",
+      companyLogo:
+        "https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/fdm-logo.png?alt=media&token=12084019-4e2e-46c7-8d6c-9cdbe6eedda3",
       description: "Completed FDM training and awaiting placement",
       companyLink: "https://fdmgroup.com/en-au/",
       skills: [
@@ -42,7 +43,8 @@ const ExperiencePage = ({ colorModeProp }) => {
       description:
         "Designed and developed websites for Tasmanian and interstate businesses",
       languages: [],
-      companyLogo: "../src/assets/logos/broken-image-logo.png",
+      companyLogo:
+        "https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/broken-image-logo.png?alt=media&token=5ce67549-4630-4e5c-ab24-513f2fa57e48",
       companyLink: "https://www.bicreative.com.au/",
       skills: [
         { tooltip: "WordPress", icon: wordPressLogo },
@@ -54,8 +56,8 @@ const ExperiencePage = ({ colorModeProp }) => {
       title: "Front End Developer",
       company: "JourneyMakr",
       companyLogo: colorMode
-        ? "../src/assets/logos/jm-logo.png"
-        : "../src/assets/logos/jm-logo.jpg",
+        ? "https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/jm-logo.png?alt=media&token=6d88464e-6842-4764-b7da-4504aa3576ef"
+        : "https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/jm-logo.jpg?alt=media&token=22e4721e-f3e7-434d-a5fd-979addc91ab9",
       description:
         "Designed and developed various front end components within the site",
       companyLink: "https://journeymakr.com/",
@@ -73,7 +75,8 @@ const ExperiencePage = ({ colorModeProp }) => {
       company: "Department of Health Tasmania",
       description:
         "Designed web messaging templates on Whispir for departmental communication and data collection from COVID-19 cases",
-      companyLogo: "../src/assets/logos/tas-gov.png",
+      companyLogo:
+        "https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/tas-gov.png?alt=media&token=7a9dac62-30e5-495c-b1b0-6084ead782f7",
       companyLink: "",
       skills: [
         { tooltip: "CSS", icon: cssLogo },

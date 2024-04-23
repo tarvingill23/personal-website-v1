@@ -11,7 +11,8 @@ const ProjectsPage = () => {
   const projects = [
     {
       title: "Movie List Maker",
-      preview: "../src/assets/logos/movie-list-website.gif",
+      preview:
+        "https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/movielist-website.gif?alt=media&token=63a6d2d8-b854-4707-97c0-80635ee83ea5",
       link: "https://github.com/tarvingill23/movielist-crud",
       description: "A place where anyone can share their favourite movies",
       stack: [
@@ -22,7 +23,8 @@ const ProjectsPage = () => {
     },
     {
       title: "Simple Digital Clock",
-      preview: "../src/assets/logos/clock.gif",
+      preview:
+        "https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/clock.gif?alt=media&token=737993f6-cd5c-488b-b873-2c70b3b2f32b",
       link: "https://github.com/tarvingill23/simple-digital-clock",
       description:
         "A simple digital clock developed in pure HTML, CSS and JavaScript",
