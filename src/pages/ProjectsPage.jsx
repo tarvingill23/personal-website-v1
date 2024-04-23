@@ -11,18 +11,18 @@ const ProjectsPage = () => {
   const projects = [
     {
       title: "Movie List Maker",
-      preview: "../src/assets/images/movie-list-website.gif",
+      preview: "../src/assets/logos/movie-list-website.gif",
       link: "https://github.com/tarvingill23/movielist-crud",
-      description: "A place where any can share their favourite movies",
+      description: "A place where anyone can share their favourite movies",
       stack: [
-        { tooltip: "HTML", icon: springBootLogo },
-        { tooltip: "CSS", icon: reactLogo },
-        { tooltip: "JavaScript", icon: mysqlLogo },
+        { tooltip: "Spring Boot", icon: springBootLogo },
+        { tooltip: "React", icon: reactLogo },
+        { tooltip: "MySQL", icon: mysqlLogo },
       ],
     },
     {
       title: "Simple Digital Clock",
-      preview: "../src/assets/images/clock.gif",
+      preview: "../src/assets/logos/clock.gif",
       link: "https://github.com/tarvingill23/simple-digital-clock",
       description:
         "A simple digital clock developed in pure HTML, CSS and JavaScript",

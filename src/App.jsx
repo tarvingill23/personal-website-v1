@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import ExperiencePage from "./pages/ExperiencePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import { useState } from "react";
+import MobileHeader from "./components/MobileHeader";
+import { useMediaQuery } from "@mui/material";
 
 function App() {
   const [colorMode, setColorMode] = useState(true);
@@ -26,12 +28,19 @@ function App() {
       },
     },
   });
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
+  const isLg = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Header colorModeProp={[colorMode, setColorMode]} />
+        {isLg && <Header colorModeProp={[colorMode, setColorMode]} />}
+        {isMd && (
+          <MobileHeader
+            colorModeProp={[colorMode, setColorMode]}
+          ></MobileHeader>
+        )}
         <div style={{ marginTop: "100px" }}>
           <Routes>
             <Route path="/" element={<Home />}></Route>

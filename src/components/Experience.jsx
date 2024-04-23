@@ -43,7 +43,7 @@ const Experience = ({
         <Grid xs={12} item>
           <Typography variant="h6">{description}</Typography>
         </Grid>
-        <Grid xs={12}>
+        <Grid item xs={12}>
           <Divider sx={{ my: "30px" }}></Divider>
         </Grid>
         {skills && skills.length > 0 && (
@@ -55,7 +55,7 @@ const Experience = ({
             container
           >
             {skills.map((skill, index) => (
-              <Grid key={index} xs={3} md={3} item>
+              <Grid key={index} xs={4} md={3} item>
                 <Tooltip title={skill.tooltip}>
                   <motion.img
                     whileHover={{ rotate: 180 }}

@@ -67,6 +67,7 @@ const Header = ({ colorModeProp }) => {
               </Box>
             </Icon>
           }
+          defaultChecked={!colorMode}
           icon={
             <Icon sx={{ color: "#FDE819" }}>
               <LightMode />

@@ -23,7 +23,7 @@ const ExperiencePage = ({ colorModeProp }) => {
     {
       title: "IT Consultant",
       company: "FDM Group",
-      companyLogo: "../src/assets/images/fdm-logo.png",
+      companyLogo: "../src/assets/logos/fdm-logo.png",
       description: "Completed FDM training and awaiting placement",
       companyLink: "https://fdmgroup.com/en-au/",
       skills: [
@@ -42,7 +42,7 @@ const ExperiencePage = ({ colorModeProp }) => {
       description:
         "Designed and developed websites for Tasmanian and interstate businesses",
       languages: [],
-      companyLogo: "../src/assets/images/broken-image-logo.png",
+      companyLogo: "../src/assets/logos/broken-image-logo.png",
       companyLink: "https://www.bicreative.com.au/",
       skills: [
         { tooltip: "WordPress", icon: wordPressLogo },
@@ -54,8 +54,8 @@ const ExperiencePage = ({ colorModeProp }) => {
       title: "Front End Developer",
       company: "JourneyMakr",
       companyLogo: colorMode
-        ? "../src/assets/images/jm-logo.png"
-        : "../src/assets/images/jm-logo.jpg",
+        ? "../src/assets/logos/jm-logo.png"
+        : "../src/assets/logos/jm-logo.jpg",
       description:
         "Designed and developed various front end components within the site",
       companyLink: "https://journeymakr.com/",
@@ -65,8 +65,6 @@ const ExperiencePage = ({ colorModeProp }) => {
         { tooltip: "CSS", icon: cssLogo },
         { tooltip: "Vue.js", icon: vueLogo },
         { tooltip: "Vuetify", icon: vuetifyLogo },
-        { tooltip: "WordPress", icon: wordPressLogo },
-        { tooltip: "Shopify", icon: shopifyLogo },
       ],
       animate: { y: [800, -10, 0] },
     },
@@ -75,7 +73,7 @@ const ExperiencePage = ({ colorModeProp }) => {
       company: "Department of Health Tasmania",
       description:
         "Designed web messaging templates on Whispir for departmental communication and data collection from COVID-19 cases",
-      companyLogo: "../src/assets/images/tas-gov.png",
+      companyLogo: "../src/assets/logos/tas-gov.png",
       companyLink: "",
       skills: [
         { tooltip: "CSS", icon: cssLogo },
