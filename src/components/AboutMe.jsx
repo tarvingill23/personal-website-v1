@@ -21,7 +21,7 @@ const AboutMe = () => {
             borderRadius: "40px",
             padding: 30,
           }}
-          src="../src/assets/logos/aboutme.jpg"
+          src="https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/aboutme.jpg?alt=media&token=eb838635-554b-42b0-90ba-0706b1b03305"
         />
       </Grid>
       <Grid lg={6} xs={10} item>
