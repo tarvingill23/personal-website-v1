@@ -43,12 +43,12 @@ const ProjectsPage = () => {
   console.log(projects);
   return (
     <Grid
-      rowSpacing={4}
+      rowSpacing={2}
       columnSpacing={10}
       justifyContent={"center"}
       alignItems={"start"}
       container
-      sx={{ height: "100vh" }}
+      sx={{ p: 3, mb: 25 }}
     >
       <Grid sx={{ display: "flex", justifyContent: "center" }} xs={12} item>
         <Typography variant="h3">

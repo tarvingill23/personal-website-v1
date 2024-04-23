@@ -97,10 +97,10 @@ const ExperiencePage = ({ colorModeProp }) => {
     <Grid
       justifyContent={"center"}
       alignItems={"start"}
-      rowSpacing={10}
+      rowSpacing={12}
       columnSpacing={6}
       container
-      sx={{ p: 3 }}
+      sx={{ p: 3, mb: 25 }}
     >
       <Grid sx={{ display: "flex", justifyContent: "center" }} xs={12} item>
         <Typography variant="h3">

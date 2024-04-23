@@ -31,25 +31,22 @@ const Project = ({ title, projPrev, link, stack, description }) => {
           to={link}
           target="_blank"
         >
-          <CardContent sx={{ display: "flex", justifyContent: "center" }}>
-            <img
-              style={{ minHeight: "280px", height: "100%", width: "100%" }}
-              src={projPrev}
-            />
+          <CardContent>
+            <img style={{ width: "100%" }} src={projPrev} />
           </CardContent>
           <CardHeader title={<b>{title}</b>}></CardHeader>
 
           {stack && stack.length > 0 && (
             <CardContent>
               <Grid
-                rowSpacing={5}
+                rowSpacing={3}
                 columnSpacing={4}
                 alignItems={"center"}
                 minHeight="100px"
                 container
               >
                 <Grid xs={12} item>
-                  <Typography variant="p">{description}</Typography>
+                  <Typography variant="h6">{description}</Typography>
                 </Grid>
                 {stack.map((stack, index) => (
                   <Grid key={index} xs={3} md={3} item>

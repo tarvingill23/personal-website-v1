@@ -18,7 +18,6 @@ import { Link } from "react-router-dom";
 import ContactIcons from "./ContactIcons";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import { DarkMode } from "@mui/icons-material";
 import { LightMode } from "@mui/icons-material";
 
@@ -30,7 +29,6 @@ const MobileHeader = ({ colorModeProp }) => {
     { name: "Projects", link: "/projects" },
   ];
   const [colorMode, setColorMode] = colorModeProp;
-  const [barColor, setBarColor] = useState("primary");
   const location = useLocation();
   const currentURL = location.pathname;
   const toggleMode = () => {
@@ -41,22 +39,8 @@ const MobileHeader = ({ colorModeProp }) => {
     setOpen(newOpen);
   };
 
-  useEffect(() => {
-    switch (currentURL) {
-      case "/":
-        setBarColor("secondary");
-        break;
-      case "/experience":
-        setBarColor("info");
-        break;
-      case "/projects":
-        setBarColor("warning");
-        break;
-    }
-  }, [currentURL]);
-
   return (
-    <AppBar variant="flat" color={barColor}>
+    <AppBar variant="flat" color="secondary">
       <Toolbar
         sx={{
           my: "4px",
