@@ -20,7 +20,7 @@ const Experience = ({
         sx={{
           boxShadow: "0px 0px 30px 2px #191970",
           p: 5,
-          minHeight: "500px",
+          minHeight: "600px",
         }}
       >
         <motion.div whileHover={{ scale: companyLink ? 1.2 : 1 }}>

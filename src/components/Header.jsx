@@ -2,12 +2,13 @@ import {
   AppBar,
   Box,
   Button,
+  Grid,
   Icon,
   Switch,
   Toolbar,
   Typography,
 } from "@mui/material";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import ContactIcons from "./ContactIcons";
 import { Link } from "react-router-dom";
 import { DarkMode } from "@mui/icons-material";
@@ -27,37 +28,36 @@ const Header = ({ colorModeProp }) => {
   const [barColor, setBarColor] = useState("primary");
   const location = useLocation();
   const currentURL = location.pathname;
+  const { scrollYProgress } = useScroll();
 
   const toggleMode = () => {
     setColorMode(!colorMode);
   };
 
   useEffect(() => {
-    // console.log(currentURL);
+    console.log(scrollYProgress);
     switch (currentURL) {
       case "/":
-        setBarColor("info");
+        setBarColor("secondary");
         break;
       case "/experience":
-        setBarColor("info");
+        setBarColor("secondary");
         break;
       case "/projects":
-        setBarColor("primary");
+        setBarColor("secondary");
+        scrollYProgress.setPrevFrameValue(0);
         break;
     }
-  }, [currentURL]);
+  }, [currentURL, scrollYProgress]);
 
   return (
     <AppBar color={barColor} elevation={0}>
       <Toolbar sx={{ display: "flex", justifyContent: "center" }}>
         {links.map((link, index) => (
           <Button sx={{ m: 2 }} key={index} LinkComponent={Link} to={link.link}>
-            <Typography color={"secondary"}>{link.name}</Typography>
+            <Typography>{link.name}</Typography>
           </Button>
         ))}
-        {/* <IconButton onClick={playAudio}>
-          {muted === true ? <VolumeOff /> : <VolumeUp />}
-        </IconButton> */}
         <ContactIcons currentURLProp={currentURL} colorMode={colorMode} />
         <Switch
           checkedIcon={
@@ -77,10 +77,17 @@ const Header = ({ colorModeProp }) => {
           sx={{ ml: 3, pl: "8px", pr: "6px", pb: "2px", pt: "8px" }}
         />
       </Toolbar>
-      <motion.div
+      <Grid xs={12} item>
+        <motion.div
+          className="progress-bar"
+          style={{ scaleX: scrollYProgress }}
+        />
+      </Grid>
+      {/* <motion.div
+        initial={{ width: 0 }}
         animate={{
-          backgroundColor: ["#034694", "#FFFFFF"],
-          opacity: [1, 0.3],
+          backgroundColor: ["#034694", "#DBA111"],
+          opacity: [1, 0.3, 1],
           height: "2px",
           transitionEnd: {
             width: "100%",
@@ -90,7 +97,7 @@ const Header = ({ colorModeProp }) => {
           duration: 2,
           ease: "easeInOut",
         }}
-      />
+      /> */}
     </AppBar>
   );
 };

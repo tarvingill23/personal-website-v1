@@ -22,7 +22,6 @@ const Project = ({ title, projPrev, link, stack, description }) => {
         container
         sx={{
           boxShadow: "0px 0px 10px 10px #DBA111",
-          minHeight: "500px",
         }}
       >
         <Card
@@ -33,7 +32,10 @@ const Project = ({ title, projPrev, link, stack, description }) => {
           target="_blank"
         >
           <CardContent sx={{ display: "flex", justifyContent: "center" }}>
-            <img style={{ height: "100%", width: "100%" }} src={projPrev} />
+            <img
+              style={{ minHeight: "280px", height: "100%", width: "100%" }}
+              src={projPrev}
+            />
           </CardContent>
           <CardHeader title={<b>{title}</b>}></CardHeader>
 

@@ -16,6 +16,7 @@ import cssLogo from "../assets/logos/css.svg";
 import rLogo from "../assets/logos/rlogo.svg";
 import { Grid, Typography } from "@mui/material";
 import PropTypes from "prop-types";
+import { useEffect } from "react";
 
 const ExperiencePage = ({ colorModeProp }) => {
   const colorMode = colorModeProp[0];
@@ -88,6 +89,10 @@ const ExperiencePage = ({ colorModeProp }) => {
     },
   ];
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Grid
       justifyContent={"center"}
@@ -104,7 +109,7 @@ const ExperiencePage = ({ colorModeProp }) => {
       </Grid>
       {jobs.map((job, index) => {
         return (
-          <Grid lg={6} xs={12} key={index} item>
+          <Grid sx lg={6} xs={12} key={index} item>
             <Experience
               key={index}
               title={job.title}

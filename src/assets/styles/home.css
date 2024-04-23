@@ -2,3 +2,13 @@
   height: 80vh;
   place-items: center;
 }
+
+.progress-bar {
+  position: fixed;
+  top: 10;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #dba111;
+  transform-origin: 0%;
+}

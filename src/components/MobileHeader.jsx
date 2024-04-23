@@ -30,7 +30,6 @@ const MobileHeader = ({ colorModeProp }) => {
     { name: "Projects", link: "/projects" },
   ];
   const [colorMode, setColorMode] = colorModeProp;
-  console.log(colorModeProp, colorMode);
   const [barColor, setBarColor] = useState("primary");
   const location = useLocation();
   const currentURL = location.pathname;
@@ -43,22 +42,21 @@ const MobileHeader = ({ colorModeProp }) => {
   };
 
   useEffect(() => {
-    // console.log(currentURL);
     switch (currentURL) {
       case "/":
-        setBarColor("info");
+        setBarColor("secondary");
         break;
       case "/experience":
         setBarColor("info");
         break;
       case "/projects":
-        setBarColor("primary");
+        setBarColor("warning");
         break;
     }
   }, [currentURL]);
 
   return (
-    <AppBar color={barColor}>
+    <AppBar variant="flat" color={barColor}>
       <Toolbar
         sx={{
           my: "4px",

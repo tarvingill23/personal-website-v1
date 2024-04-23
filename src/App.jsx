@@ -18,13 +18,16 @@ function App() {
     palette: {
       mode: colorMode ? "light" : "dark",
       primary: {
-        main: "#DBA111",
+        main: "#FFFFF",
       },
       secondary: {
         main: "#FFFFFF",
       },
       info: {
         main: "#191970",
+      },
+      warning: {
+        main: "#DBA111",
       },
     },
   });

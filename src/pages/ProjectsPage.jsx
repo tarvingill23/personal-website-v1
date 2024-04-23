@@ -6,8 +6,12 @@ import mysqlLogo from "../assets/logos/mysql.svg";
 import javaScriptLogo from "../assets/logos/javascript.svg";
 import htmlLogo from "../assets/logos/html-5.svg";
 import cssLogo from "../assets/logos/css.svg";
+import { useEffect } from "react";
 
 const ProjectsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const projects = [
     {
       title: "Movie List Maker",
@@ -27,7 +31,7 @@ const ProjectsPage = () => {
         "https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/clock.gif?alt=media&token=737993f6-cd5c-488b-b873-2c70b3b2f32b",
       link: "https://github.com/tarvingill23/simple-digital-clock",
       description:
-        "A simple digital clock developed in pure HTML, CSS and JavaScript",
+        "A simple digital clock developed in pure HTML, CSS & JavaScript",
       stack: [
         { tooltip: "HTML", icon: htmlLogo },
         { tooltip: "CSS", icon: cssLogo },
@@ -35,6 +39,8 @@ const ProjectsPage = () => {
       ],
     },
   ];
+
+  console.log(projects);
   return (
     <Grid
       rowSpacing={4}
@@ -42,6 +48,7 @@ const ProjectsPage = () => {
       justifyContent={"center"}
       alignItems={"start"}
       container
+      sx={{ height: "100vh" }}
     >
       <Grid sx={{ display: "flex", justifyContent: "center" }} xs={12} item>
         <Typography variant="h3">
