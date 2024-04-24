@@ -28,7 +28,7 @@ const AboutMe = () => {
         <Typography variant="h3">Based in Hobart, Tasmania</Typography>
         <Divider sx={{ my: 5 }}></Divider>
         <Typography sx={{ mb: 10 }} variant="h4">
-          I always aim to create good quality websites that people will enjoy
+          I aim to create good quality work that benefits people
         </Typography>
         <Button
           endIcon={
