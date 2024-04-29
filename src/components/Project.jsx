@@ -31,7 +31,7 @@ const Project = ({ title, projPrev, link, stack, description }) => {
       >
         <Card
           variant="flat"
-          sx={{ textDecoration: "none", height: "100%" }}
+          sx={{ textDecoration: "none", height: "650px" }}
           component={Link}
           to={link}
           target="_blank"
