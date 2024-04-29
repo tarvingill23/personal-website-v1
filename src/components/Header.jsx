@@ -2,6 +2,7 @@ import {
   AppBar,
   Box,
   Button,
+  FormControlLabel,
   Grid,
   Icon,
   Switch,
@@ -32,10 +33,10 @@ const Header = ({ colorModeProp }) => {
 
   const toggleMode = () => {
     setColorMode(!colorMode);
+    localStorage.setItem("dark-mode", !colorMode);
   };
 
   useEffect(() => {
-    console.log(scrollYProgress);
     switch (currentURL) {
       case "/":
         setBarColor("secondary");
@@ -59,22 +60,26 @@ const Header = ({ colorModeProp }) => {
           </Button>
         ))}
         <ContactIcons currentURLProp={currentURL} colorMode={colorMode} />
-        <Switch
-          checkedIcon={
-            <Icon sx={{ color: "#E9D528" }}>
-              <Box sx={{ display: "flex" }}>
-                <DarkMode />
-              </Box>
-            </Icon>
+        <FormControlLabel
+          control={
+            <Switch
+              checkedIcon={
+                <Icon sx={{ color: "#E9D528" }}>
+                  <Box sx={{ display: "flex" }}>
+                    <DarkMode />
+                  </Box>
+                </Icon>
+              }
+              checked={!colorMode}
+              icon={
+                <Icon sx={{ color: "#FDE819" }}>
+                  <LightMode />
+                </Icon>
+              }
+              onClick={toggleMode}
+              sx={{ ml: 3, pl: "8px", pr: "6px", pb: "2px", pt: "8px" }}
+            />
           }
-          defaultChecked={!colorMode}
-          icon={
-            <Icon sx={{ color: "#FDE819" }}>
-              <LightMode />
-            </Icon>
-          }
-          onClick={toggleMode}
-          sx={{ ml: 3, pl: "8px", pr: "6px", pb: "2px", pt: "8px" }}
         />
       </Toolbar>
       <Grid xs={12} item>

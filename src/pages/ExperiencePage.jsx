@@ -109,7 +109,7 @@ const ExperiencePage = ({ colorModeProp }) => {
       </Grid>
       {jobs.map((job, index) => {
         return (
-          <Grid sx lg={6} xs={12} key={index} item>
+          <Grid lg={6} xs={12} key={index} item>
             <Experience
               key={index}
               title={job.title}

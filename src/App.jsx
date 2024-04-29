@@ -10,7 +10,9 @@ import MobileHeader from "./components/MobileHeader";
 import { useMediaQuery } from "@mui/material";
 
 function App() {
-  const [colorMode, setColorMode] = useState(true);
+  const [colorMode, setColorMode] = useState(
+    localStorage.getItem("dark-mode") === "true" ? true : false
+  );
   const theme = createTheme({
     typography: {
       fontFamily: "Work Sans, sans-serif",

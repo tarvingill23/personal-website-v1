@@ -1,5 +1,4 @@
 import "../assets/styles/background.css";
-import { motion, useScroll } from "framer-motion";
 import springBootLogo from "../assets/logos/springboot.svg";
 import reactLogo from "../assets/logos/react.svg";
 import javaLogo from "../assets/logos/java.svg";
@@ -13,26 +12,9 @@ import vuetifyLogo from "../assets/logos/vuetify.svg";
 import javaScriptLogo from "../assets/logos/javascript.svg";
 import htmlLogo from "../assets/logos/html-5.svg";
 import { Grid } from "@mui/material";
+import { motion } from "framer-motion";
 
 const Background = () => {
-  const randomPosition = () => {
-    const min = 0;
-    const max = 1000;
-    const minCeiled = Math.ceil(min);
-    const maxFloored = Math.floor(max);
-    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
-  };
-  // const logoPosition = () => {
-  //   return {
-  //     position: "absolute",
-  //     top:
-  //     right: randomPosition(),
-  //     left: randomPosition(),
-  //     bottom: randomPosition(),
-  //   };
-  //   // console.log(randomPosition(400, 1000));
-  // };
-
   const logos = [
     springBootLogo,
     reactLogo,

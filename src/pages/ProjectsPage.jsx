@@ -57,7 +57,7 @@ const ProjectsPage = () => {
       </Grid>
       {projects.map((project, index) => {
         return (
-          <Grid xs={11} lg={5} sx={{ m: 5 }} item key={index}>
+          <Grid xs={12} lg={6} item key={index}>
             <Project
               title={project.title}
               projPrev={project.preview}

@@ -12,18 +12,19 @@ const AboutMe = () => {
       container
       sx={{ my: 10 }}
     >
-      <Grid xs={8} lg={5} item>
+      <Grid xs={12} lg={4} item>
         <img
           style={{
             display: "flex",
             height: "90%",
-            width: "70%",
+            width: "90%",
             borderRadius: "40px",
             padding: "20px",
           }}
           src="https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/aboutme.jpg?alt=media&token=eb838635-554b-42b0-90ba-0706b1b03305"
         />
       </Grid>
+      <Grid item lg={1}></Grid>
       <Grid lg={6} xs={10} item>
         <Typography variant="h3">Based in Hobart, Tasmania</Typography>
         <Divider sx={{ my: 5 }}></Divider>

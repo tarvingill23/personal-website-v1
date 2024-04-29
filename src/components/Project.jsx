@@ -20,6 +20,7 @@ const Project = ({ title, projPrev, link, stack, description }) => {
       whileHover={{ scale: 1.1 }}
       initial={{ scale: 0.5 }}
       animate={{ scale: 1 }}
+      style={{ margin: 5 }}
     >
       <Grid
         alignItems={"center"}
