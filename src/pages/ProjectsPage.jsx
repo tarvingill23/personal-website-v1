@@ -39,8 +39,6 @@ const ProjectsPage = () => {
       ],
     },
   ];
-
-  console.log(projects);
   return (
     <Grid
       rowSpacing={12}
