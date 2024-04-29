@@ -10,16 +10,16 @@ const AboutMe = () => {
       justifyContent={"center"}
       alignItems={"center"}
       container
+      sx={{ my: 10 }}
     >
-      <Grid xs={8} lg={6} item>
+      <Grid xs={8} lg={5} item>
         <img
           style={{
             display: "flex",
-
             height: "90%",
-            width: "90%",
+            width: "70%",
             borderRadius: "40px",
-            padding: 30,
+            padding: "20px",
           }}
           src="https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/aboutme.jpg?alt=media&token=eb838635-554b-42b0-90ba-0706b1b03305"
         />

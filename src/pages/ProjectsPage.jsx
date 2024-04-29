@@ -43,7 +43,7 @@ const ProjectsPage = () => {
   console.log(projects);
   return (
     <Grid
-      rowSpacing={2}
+      rowSpacing={12}
       columnSpacing={10}
       justifyContent={"center"}
       alignItems={"start"}

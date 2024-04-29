@@ -19,7 +19,7 @@ const Home = () => {
         container
       >
         <Background></Background>
-        <Grid xs={10} item>
+        <Grid lg={10} md={12} xs={10} item>
           <motion.div
             style={{
               display: "flex",

@@ -9,8 +9,12 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 const Project = ({ title, projPrev, link, stack, description }) => {
+  const theme = useTheme();
+  const isMd = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
@@ -26,20 +30,23 @@ const Project = ({ title, projPrev, link, stack, description }) => {
       >
         <Card
           variant="flat"
-          sx={{ textDecoration: "none" }}
+          sx={{ textDecoration: "none", height: "100%" }}
           component={Link}
           to={link}
           target="_blank"
         >
           <CardContent>
-            <img style={{ width: "100%" }} src={projPrev} />
+            <img
+              style={{ height: isMd ? "100%" : "350px", width: "100%" }}
+              src={projPrev}
+            />
           </CardContent>
           <CardHeader title={<b>{title}</b>}></CardHeader>
 
           {stack && stack.length > 0 && (
             <CardContent>
               <Grid
-                rowSpacing={3}
+                rowSpacing={5}
                 columnSpacing={4}
                 alignItems={"center"}
                 minHeight="100px"
