@@ -26,7 +26,7 @@ const ExperiencePage = ({ colorModeProp }) => {
       company: "FDM Group",
       companyLogo:
         "https://firebasestorage.googleapis.com/v0/b/personal-website-3bb47.appspot.com/o/fdm-logo.png?alt=media&token=12084019-4e2e-46c7-8d6c-9cdbe6eedda3",
-      description: "Completed FDM training and awaiting placement",
+      description: "Completed FDM training. Currently upskilling in data engineering with Python and web development with Microsoft PowerApps and Django.",
       companyLink: "https://fdmgroup.com/en-au/",
       skills: [
         { tooltip: "Java", icon: javaLogo },

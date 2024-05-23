@@ -1,5 +1,5 @@
 import { ArrowForward } from "@mui/icons-material";
-import { Button, Divider, Grid, Icon, Typography } from "@mui/material";
+import { Button, Grid, Icon, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -26,8 +26,7 @@ const AboutMe = () => {
       </Grid>
       <Grid item lg={1}></Grid>
       <Grid lg={6} xs={10} item>
-        <Typography variant="h3">Based in Hobart, Tasmania</Typography>
-        <Divider sx={{ my: 5 }}></Divider>
+
         <Typography sx={{ mb: 10 }} variant="h4">
           I aim to create good quality work that benefits people
         </Typography>
